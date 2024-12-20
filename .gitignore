@@ -7,6 +7,8 @@
 .codebuddy/
 .idea/
 tmp/
+.vscode/
+.DS_Store
 
 # Ignore bundler config.
 /.bundle

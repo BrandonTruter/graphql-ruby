@@ -57,6 +57,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
@@ -66,6 +67,11 @@ GEM
     crass (1.0.6)
     date (3.4.1)
     erubi (1.13.0)
+    factory_bot (6.5.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.4)
+      factory_bot (~> 6.5)
+      railties (>= 5.0.0)
     ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-aarch64-linux-musl)
     ffi (1.17.0-arm-linux-gnu)
@@ -76,15 +82,15 @@ GEM
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
-    fiber-storage (1.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    graphiql-rails (1.7.0)
+    graphiql-rails (1.5.0)
       railties
       sprockets-rails
-    graphql (2.4.8)
+    graphql (1.13.23)
       base64
-      fiber-storage
+    graphql-query-resolver (0.2.0)
+      graphql (~> 1.0, >= 1.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     jbuilder (2.13.0)
@@ -128,7 +134,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.17.2-x86_64-linux)
       racc (~> 1.4)
-    psych (3.3.4)
     puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -227,20 +232,21 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bcrypt (~> 3.1.13)
   bootsnap (>= 1.4.2)
   byebug
-  graphiql-rails (= 1.7.0)
-  graphql (~> 2.4)
+  factory_bot_rails
+  graphiql-rails (= 1.5.0)
+  graphql
+  graphql-query-resolver
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  psych (< 4)
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   sass-rails (>= 6)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
-  tzinfo-data
   web-console (>= 3.3.0)
 
 RUBY VERSION
