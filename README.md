@@ -26,15 +26,54 @@ query {
 
 ### Mutations
 
+#### Create Link
+
 ```graphql
 mutation {
   createLink(
-    description: "Best tools!",
-    url: "http://npmjs.com/package/graphql-tools"
+    description: "Testing playground",
+    url: "http://localhost:3000/graphiql"
   ) {
     id
     url
     description
+    postedBy {
+      id
+      name
+    }
+  }
+}
+```
+
+#### Create User
+
+```graphql
+mutation {
+  createUser(
+    name: "Test User",
+    authProvider: {
+      credentials: {
+        email: "email@example.com",
+        password: "123456"
+      }
+  	}
+  ) {
+    id
+    name
+    email
+  }
+}
+```
+
+#### Login User
+
+```graphql
+mutation {
+  signinUser(credentials: {
+    email: "email@example.com",
+  	password: "123456"
+  }) {
+    token
   }
 }
 ```
