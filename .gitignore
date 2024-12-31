@@ -37,3 +37,4 @@ tmp/
 /config/master.key
 .idea
 .codebuddy
+.pnotes/
