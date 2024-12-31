@@ -12,6 +12,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'graphql'
 gem 'graphql-query-resolver'
+gem 'search_object_graphql', '0.3.1'
 gem 'bcrypt', '~> 3.1.13'
 
 group :development, :test do
